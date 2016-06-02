@@ -41,4 +41,8 @@ adminRouter.get('/posts', function (request, response) {
 
 app.use('/admin', adminRouter);
 
+adminRouter.get('/users/:name', function (request, response) {
+  response.send('<b>' + 'Hello ' + request.params.name + '</b>');
+});
+
 console.log('1337 is the magic port');
